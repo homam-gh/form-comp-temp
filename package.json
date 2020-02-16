@@ -1,0 +1,70 @@
+{
+  "name": "form-component",
+  "version": "1.0.0",
+  "description": "a simple form and form elements components to work with",
+  "main": "index.js",
+  "module": "build/index.es.js",
+  "style": "dist/styles.scss",
+  "jsnext:main": "build/index.es.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest --env=jsdom",
+    "format": "prettier \"src/**/*.{js, html}\" --write",
+    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
+    },
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  },
+  "files": [
+    "build",
+    "dist"
+  ],
+  "author": "Homam",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^25.1.1",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-test-renderer": "^16.9.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "jest": "^25.1.0",
+    "jest-transform-css": "^2.0.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts-ts": "^3.1.0",
+    "react-test-renderer": "^16.12.0",
+    "ts-jest": "^25.1.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.5",
+    "rollup": "^1.31.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-scss": "^2.1.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3"
+  }
+}
