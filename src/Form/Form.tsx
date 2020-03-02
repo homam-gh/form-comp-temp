@@ -17,7 +17,9 @@ export default class FormComp extends React.Component<IFormProps, IFormState> {
 
   handleInputChange(inputData: IFormElData) {
     const tmpFormData: any = { ...this.state.FormData }
-    tmpFormData[inputData.name] = inputData.value
+    if (typeof (inputData.name) === 'string') {
+      tmpFormData[inputData.name] = inputData.value
+    }
 
     this.setState({
       FormData: tmpFormData
