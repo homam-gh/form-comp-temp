@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 interface inputData {
   name: string,
@@ -27,16 +27,14 @@ class InputComponent extends React.Component<inputData> {
     const type: string = this.props.type ? this.props.type : "text"
 
     return (
-      <fieldset>
-        <label>
-          {this.props.label}
-          {
-            this.props.type === 'textarea'
-              ? (<textarea name={name} value={value} onChange={this.onChange} />)
-              : (<input type={type} name={name} value={value} onChange={this.onChange} />)
-          }
-        </label>
-      </fieldset>
+      <div className="form-group">
+        <label>{this.props.label}</label>
+        {
+          this.props.type === 'textarea'
+            ? (<textarea name={name} className="form-control" value={value} onChange={this.onChange} />)
+            : (<input type={type} className="form-control" name={name} value={value} onChange={this.onChange} />)
+        }
+      </div>
     )
   }
 }

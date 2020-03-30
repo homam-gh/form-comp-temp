@@ -1,10 +1,18 @@
-import React  from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import {App} from './Components/App'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { routes } from "./Constants/Routs"
+import { CustomForm } from './pages/FormTestPage'
 import "./style.scss"
-// const MyApp = React.lazy(()=>import("./Loader"))
-// import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(   
-    <App/>, document.getElementById('root')
-)
+function App() {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route path={routes.HOME} component={CustomForm} />
+            </Switch>
+        </BrowserRouter>
+    );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))

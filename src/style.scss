@@ -1,34 +1,19 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
-body{
-    direction: rtl !important;
+html,
+body {
+    height: 100%;
+    font-size: 16px;
 }
 
-.bottom-header{
-    margin-bottom: 70px;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
-.align-right {
-    text-align: right;
+main {
+    background: #f3f3f6;
+    min-height: 100vh;
+    padding: 60px;
 }
-
-.margin-button {
-margin:2px
-}
-
-.left-float{
-    float: left;
-}
-
-.prewiev-plan {
-    height: 400px;
-    border: 1px solid rgb(209, 209, 209);
-    border-radius: 5px;
-    background-color: white;
-}
-
-.form-box {
-    background-color: rgb(236, 236, 236);
-    padding: 5px;
-}
-

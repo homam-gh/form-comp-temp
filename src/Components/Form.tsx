@@ -1,17 +1,10 @@
-import * as React from "react";
+import React from "react";
 import { Component, Fragment } from "react";
-import { IFormElData, ICustomFormChildren } from "./FormElements/formModels";
+import { IFormElData, ICustomFormChildren, IFormState, IFormProps } from "../Models/formModels";
 
-interface IState {
-	FormData: {
-		[key: string]: string | boolean | number;
-	};
-}
+interface IState extends IFormState { }
 
-interface IProps {
-	FormData: IFormElData;
-	children: ICustomFormChildren;
-}
+interface IProps extends IFormProps { }
 
 class CustomFormComp extends Component<IProps, IState> {
 	state = {

@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { IRadioData } from "./formModels";
+import React from 'react'
+import { IRadioData } from "../Models/formModels";
+import { throws } from 'assert';
 
 class RadioComponent extends React.Component<IRadioData> {
   constructor(props: IRadioData) {
@@ -19,17 +20,18 @@ class RadioComponent extends React.Component<IRadioData> {
     const radioValue: string = this.props.value
 
     return (
-      <fieldset>
-        <label>
+      <div className="form-check">
+        <input
+          className="form-check-input"
+          type="radio"
+          name={name}
+          value={radioValue}
+          onChange={this.onChange}
+        />
+        <label className="form-check-label">
           {this.props.label}
-          <input
-            type="radio"
-            name={name}
-            value={radioValue}
-            onChange={this.onChange}
-          />
         </label>
-      </fieldset>
+      </div>
     )
   }
 }

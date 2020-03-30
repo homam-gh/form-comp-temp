@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { IFormElData, ICustomFormChildren, ICheckboxData } from "./formModels";
+import React from 'react'
+import { ICheckboxData } from "../Models/formModels";
 
 class CheckboxComponent extends React.Component<ICheckboxData> {
   constructor(props: ICheckboxData) {
@@ -19,12 +19,13 @@ class CheckboxComponent extends React.Component<ICheckboxData> {
     const checked: any = this.props.value
 
     return (
-      <fieldset>
-        <label>
+      <div className="form-check">
+        <input className="form-check-input" type="checkbox" name={name} checked={checked} onChange={this.onChange} />
+        <label className="form-check-label">
           {this.props.label}
-          <input type="checkbox" name={name} checked={checked} onChange={this.onChange} />
         </label>
-      </fieldset>
+      </div>
+
     )
   }
 }

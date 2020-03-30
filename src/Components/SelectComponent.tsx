@@ -1,4 +1,4 @@
-import React, { Component, JSXElementConstructor } from 'react'
+import React from 'react'
 
 interface selectData {
   name: string,
@@ -47,18 +47,17 @@ class SelectComponent extends React.Component<selectData> {
     const options = this.populateOptions(this.props.options)
 
     return (
-      <fieldset>
-        <label>
-          {this.props.label}
-          <select
-            name={name}
-            value={value}
-            onChange={this.onChange}
-          >
-            {options}
-          </select>
-        </label>
-      </fieldset>
+      <div className="form-group">
+        <label>{this.props.label}</label>
+        <select
+          name={name}
+          value={value}
+          onChange={this.onChange}
+          className="form-control"
+        >
+          {options}
+        </select>
+      </div>
     )
   }
 }
