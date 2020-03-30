@@ -1,5 +1,5 @@
 import React from 'react'
-import { ICheckboxData } from "../Models/formModels";
+import { ICheckboxData } from "../Models/formModels"
 
 class CheckboxComponent extends React.Component<ICheckboxData> {
   constructor(props: ICheckboxData) {
@@ -7,6 +7,7 @@ class CheckboxComponent extends React.Component<ICheckboxData> {
     this.onChange = this.onChange.bind(this)
   }
 
+  // TODO: this any should be replaced
   onChange(e: any) {
     this.props.onChange && this.props.onChange({
       name: this.props.name,
@@ -15,8 +16,8 @@ class CheckboxComponent extends React.Component<ICheckboxData> {
   }
 
   render() {
-    const name: string = this.props.name
-    const checked: any = this.props.value
+    const name = this.props.name
+    const checked = this.props.value
 
     return (
       <div className="form-check">

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import CustomFormComp from "../Components/Form";
-import InputComponent from "../Components/InputComponent";
-import SelectComponent from "../Components/SelectComponent";
-import CheckboxComponent from "../Components/CheckboxComponent";
-import { IFormElData } from "../Models/formModels";
-import RadioComponent from "../Components/RadioComponent";
+import React, { Component } from "react"
+import CustomFormComp from "../Components/Form"
+import InputComponent from "../Components/InputComponent"
+import SelectComponent from "../Components/SelectComponent"
+import CheckboxComponent from "../Components/CheckboxComponent"
+import { IFormElData } from "../Models/formModels"
+import RadioComponent from "../Components/RadioComponent"
 
 interface IState { }
 
@@ -20,7 +20,7 @@ export class CustomForm extends Component<IProps, IState> {
       city: "tehran",
       agreement: false,
       gender: 'female'
-    };
+    }
 
     const cities = [
       {
@@ -52,6 +52,8 @@ export class CustomForm extends Component<IProps, IState> {
                     <h2>Test Form</h2>
                     <h5>Another header to make things more interestin</h5>
                     <p>Simple text paragraf to test recursive functions</p>
+                    <p>the next is an empty H1 tag</p>
+                    <h1></h1>
                     <div className="c1">
                       <div className="c2">
                         <div className="c3">
@@ -83,7 +85,9 @@ export class CustomForm extends Component<IProps, IState> {
                     </div>
                     <InputComponent label="phone: " name="phone" type="number" />
                     <InputComponent label="address: " name="address" type="textarea" />
-                    <CheckboxComponent label="agreement: " name="agreement" />
+                    <CheckboxComponent label="agreement" name="agreement" />
+                    <br />
+                    <button type="submit" className="btn btn-secondary">Secondary</button>
                   </CustomFormComp>
                 </div>
               </div>
@@ -91,6 +95,6 @@ export class CustomForm extends Component<IProps, IState> {
           </div>
         </div>
       </main>
-    );
+    )
   }
 }

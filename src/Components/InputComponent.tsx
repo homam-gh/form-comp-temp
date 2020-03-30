@@ -1,19 +1,13 @@
 import React from 'react'
+import { IInputData } from '../Models/formModels'
 
-interface inputData {
-  name: string,
-  label: string,
-  value?: string,
-  type?: string,
-  onChange?(e: any): void
-}
-
-class InputComponent extends React.Component<inputData> {
-  constructor(props: inputData) {
+class InputComponent extends React.Component<IInputData> {
+  constructor(props: IInputData) {
     super(props)
     this.onChange = this.onChange.bind(this)
   }
 
+  // TODO: this any should be replaced
   onChange(e: any) {
     this.props.onChange && this.props.onChange({
       name: this.props.name,
@@ -22,9 +16,9 @@ class InputComponent extends React.Component<inputData> {
   }
 
   render() {
-    const value: string | undefined = this.props.value
-    const name: string = this.props.name
-    const type: string = this.props.type ? this.props.type : "text"
+    const value = this.props.value
+    const name = this.props.name
+    const type = this.props.type ? this.props.type : "text"
 
     return (
       <div className="form-group">

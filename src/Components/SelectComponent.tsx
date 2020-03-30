@@ -1,25 +1,13 @@
 import React from 'react'
+import { SelectOption, SelectData } from '../Models/formModels'
 
-interface selectData {
-  name: string,
-  label: string,
-  value?: string,
-  placeholder: string,
-  options: selectOption[],
-  onChange?(e: any): void
-}
-
-interface selectOption {
-  value: string,
-  label: string
-}
-
-class SelectComponent extends React.Component<selectData> {
-  constructor(props: selectData) {
+class SelectComponent extends React.Component<SelectData> {
+  constructor(props: SelectData) {
     super(props)
     this.onChange = this.onChange.bind(this)
   }
 
+  // TODO: this any should be replaced
   onChange(e: any) {
     this.props.onChange && this.props.onChange({
       name: this.props.name,
@@ -27,7 +15,8 @@ class SelectComponent extends React.Component<selectData> {
     })
   }
 
-  populateOptions(options: selectOption[]) {
+  populateOptions(options: SelectOption[]) {
+    // TODO: think of a way to add first option as a placeholder
     // if (!options || !options.length || options.length == 0) {
     //   return <option selected disabled>{this.props.placeholder}</option>
     // }
@@ -42,8 +31,8 @@ class SelectComponent extends React.Component<selectData> {
   }
 
   render() {
-    const value: string | undefined = this.props.value
-    const name: string = this.props.name
+    const value = this.props.value
+    const name = this.props.name
     const options = this.populateOptions(this.props.options)
 
     return (

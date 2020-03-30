@@ -12,7 +12,7 @@ function App() {
                 <Route path={routes.HOME} component={CustomForm} />
             </Switch>
         </BrowserRouter>
-    );
+    )
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))

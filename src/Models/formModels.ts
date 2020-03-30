@@ -7,7 +7,7 @@ export interface IFormState {
 
 // basic input data from form component
 export interface IFormElData {
-    name: string,
+    name: string
 	[key: string]: string | boolean | number
 }
 
@@ -22,37 +22,40 @@ export interface IFormProps {
 
 // abstract basic data for all form elements
 export interface BasicFormElemnetdata {
-    name: string,
-    label: string,
-    id?: string,
-    value?: string | boolean | number,
+    name: string
+    label: string
+    id?: string
+    value?: string | string[] | boolean | number
     onChange?(e: any): void
 }
 
 
-// porps structure for text inputs e.g text, textarea, email, phone, number ,...
-export interface IInputData extends BasicFormElemnetdata {}
+// porps structure for text inputs e.g text textarea email phone number ...
+export interface IInputData extends BasicFormElemnetdata {
+    value?: string | string[] | number
+    type?: string,
+}
 
 // porps structure for checkboxes
-export interface ICheckboxData extends BasicFormElemnetdata{
+export interface ICheckboxData extends BasicFormElemnetdata {
     value?: boolean
 }
 
 // props structure for radios
-export interface IRadioData {
-    value?: string | number,
+export interface IRadioData extends BasicFormElemnetdata {
+    value?: string | number
     checked?: boolean
 }
 
 // structure for select options
-interface selectOption {
-    value: string,
+export interface SelectOption {
+    value: string
     label: string
 }
 
-// props structure for radios
-interface selectData extends BasicFormElemnetdata {
-    value?: string,
-    placeholder: string,
-    options: selectOption[]
+// props structure for selects
+export interface SelectData extends BasicFormElemnetdata {
+    value?: string
+    placeholder: string
+    options: SelectOption[]
 }
