@@ -1,70 +1,51 @@
 {
-  "name": "form-component",
-  "version": "1.0.0",
-  "description": "a simple form and form elements components to work with",
-  "main": "index.js",
-  "module": "build/index.es.js",
-  "style": "dist/styles.scss",
-  "jsnext:main": "build/index.es.js",
-  "scripts": {
-    "build": "rollup -c",
-    "test": "jest --env=jsdom",
-    "format": "prettier \"src/**/*.{js, html}\" --write",
-    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.js$": "babel-jest",
-      ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
-    },
-    "moduleNameMapper": {
-      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
-    }
-  },
-  "files": [
-    "build",
-    "dist"
-  ],
-  "author": "Homam",
-  "license": "ISC",
-  "peerDependencies": {
+  "name": "bajash",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/redux": "^3.6.0",
+    "@types/redux-persist": "^4.3.1",
+    "bootstrap": "^4.4.1",
+    "node-sass": "^4.13.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/jest": "^25.1.1",
-    "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-test-renderer": "^16.9.2",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.3",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "jest": "^25.1.0",
-    "jest-transform-css": "^2.0.0",
-    "prettier": "^1.19.1",
-    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
-    "react-scripts-ts": "^3.1.0",
-    "react-test-renderer": "^16.12.0",
-    "ts-jest": "^25.1.0",
-    "tslib": "^1.10.0",
-    "typescript": "^3.7.5",
-    "rollup": "^1.31.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-scss": "^2.1.0",
-    "rollup-plugin-typescript2": "^0.25.3",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.3"
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "save": "^2.4.0",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
