@@ -4,7 +4,7 @@ import InputComponent from "../Components/InputComponent"
 import SelectComponent from "../Components/SelectComponent"
 import CheckboxComponent from "../Components/CheckboxComponent"
 import { IFormElData } from "../Models/formModels"
-import InputField from "../Components/InputField"
+import RadioComponent from "../Components/RadioComponent"
 
 interface IState { }
 
@@ -66,13 +66,13 @@ export class CustomForm extends Component<IProps, IState> {
                         <div className="c33">
                           <div className="row">
                             <div className="col">
-                              <InputField label="male" name="gender" value="male" />
+                              <RadioComponent label="male" name="gender" value="male" />
                             </div>
                             <div className="col">
-                              <InputField label="female" name="gender" value="female" />
+                              <RadioComponent label="female" name="gender" value="female" />
                             </div>
                             <div className="col">
-                              <InputField label="other" name="gender" value="other" />
+                              <RadioComponent label="other" name="gender" value="other" />
                             </div>
                           </div>
                         </div>

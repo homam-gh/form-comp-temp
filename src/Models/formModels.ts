@@ -1,6 +1,7 @@
 // form props abstract
 export interface IFormState {
 	FormData: {
+        // TODO: string[]
 		[key: string]: string | boolean | number
 	}
 }

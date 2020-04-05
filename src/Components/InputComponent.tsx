@@ -13,6 +13,7 @@ class InputComponent extends React.Component<IInputData> {
       name: this.props.name,
       value: e.target.value
     })
+    // Validation goes here
   }
 
   render() {
